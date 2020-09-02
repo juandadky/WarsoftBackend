@@ -161,11 +161,8 @@ app.get("/productos/nombre/:nombProducto/:tipoCliente", function (req, res, next
                     "dbo.productos.Preciod5,dbo.productos.Preciod6,dbo.productos.Preciod7 ,dbo.productos.factor, dbo.productos.Lote_pedido, dbo.productos.fec_vcmto, dbo.Productos.Afecto_Igv, dbo.productos.codprov,"+
                     "dbo.Categorias.NombreCategoria as Categoria, dbo.MProCli.Nombre as Proveedor,dbo.productos.Suspendido, dbo.productos.codprov, dbo.Productos.Minimo, dbo.productos.Percepcion, dbo.productos.peso,"+
                     "dbo.productos.litros, dbo.marcas.detalle as nombremarca, dbo.productos.idmarca, left(dbo.productos.codigo,2) as Linea, left(dbo.productos.codigo,4) as SubLinea, dbo.Productos.CostoProv,idConta,UniMin,Grupo,subGrupo,unidadesenpedido,ean,unicolgate,faccolgate,controlaboni,combo,"+
-<<<<<<< HEAD
                     "Precio8,precio9,precio10,precio11,precio12,preciod8,preciod9,preciod10,preciod11,preciod12,canvolmer,canvolmay,cantidadvol,vendedores,zonas,tiponegocio,canti_max,pordes,productos.desde,productos.hasta,nroitems,tipocombo,surtido, preciovol,cantidadmay,preciomay2,cantidadmay2 "+
-=======
                     "Precio8,precio9,precio10,precio11,precio12,preciod8,preciod9,preciod10,preciod11,preciod12,canvolmer,canvolmay,dbo.PreciosProductos.cantidadvol,vendedores,zonas,tiponegocio,canti_max,pordes,productos.desde,productos.hasta,nroitems,tipocombo,surtido, preciovol,preciomay,cantidadmay,preciomay2,cantidadmay2 "+
->>>>>>> 0c9aa75f2792842e1deee1b4832f5d85fc906445
                     "FROM dbo.Productos INNER JOIN "+
                     "dbo.Categorias ON dbo.Productos.IdCategoria = dbo.Categorias.IdCategoria INNER JOIN "+
                     "dbo.MProCli ON dbo.Productos.IdProveedor = dbo.MproCli.IdCliente inner join "+  
@@ -1230,7 +1227,6 @@ app.get("/obtenerPromoDescuento/id/:idProducto/:tipoCliente", function (req, res
     });
 });
 
-<<<<<<< HEAD
 app.put("/actualizarCliente/:idCliente/:direccion/:referencia/:telefono/:celular", function (req, res, next) {
     var request = new mssql.Request();
     var idCliente = req.params.idCliente;
@@ -1275,6 +1271,4 @@ app.put("/actualizarCliente/:idCliente/:direccion/:referencia/:telefono/:celular
 });
 
 module.exports=app
-=======
-module.exports=app
->>>>>>> 0c9aa75f2792842e1deee1b4832f5d85fc906445
+
